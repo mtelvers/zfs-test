@@ -1,0 +1,19 @@
+diff -Naur a/src/dune b/src/dune
+--- a/src/dune	2021-02-08 10:46:48.000000000 +0000
++++ b/src/dune	2022-11-30 09:20:03.322426472 +0000
+@@ -2,7 +2,7 @@
+  (name base64)
+  (modules unsafe base64)
+  (public_name base64)
+- (libraries bytes))
++ (libraries result))
+ 
+ (rule
+  (copy %{read:../config/which-unsafe-file} unsafe.ml))
+@@ -10,5 +10,4 @@
+ (library
+  (name base64_rfc2045)
+  (modules base64_rfc2045)
+- (public_name base64.rfc2045)
+- (libraries bytes))
++ (public_name base64.rfc2045))
